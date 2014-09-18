@@ -1,2 +1,14 @@
-<h1>App#index</h1>
-<p>Find me in app/views/app/index.html.erb</p>
+<h1>Portfolio</h1>
+<p>Applications Deployed</p>
+
+<% @apps.each do |web_app| %>
+  <p><%= web_app.name %></p>
+  <p><%= web_app.description %></p>
+  <%= link_to web_app.url %>
+  
+  <% web_app.tags.each do |tag|%>
+    <ul><%= tag.name %></ul>
+  <% end %>
+
+  <br><br><br>
+<% end %>
