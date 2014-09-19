@@ -13,6 +13,7 @@ rails = Tag.create!(name: 'Rails')
 angularjs = Tag.create!(name: 'AngularJS')
 javascript = Tag.create!(name: 'Javascript')
 jquery = Tag.create!(name: 'jQuery')
+show_all = Tag.create!(name: 'Show All')
 
 apps = App.create([
   {name: 'Happy-Hr', description: 'list of all the happy hour drinks...aslkdjf lkasjdlkfj laksjd flkjaskdljf lkjasdklfj lkajsdfk jlkasjdflk alskdjf lkajsdflkj asdflkjas dfljasldkfj alskdjf lkasjdf lkasjdf lkajsfd lkjasdfl jalskdfj laksjdf lkajsdf lkajsdf laksjdf lkajsdf kjasdlkjlksjdf kljasfd ', url: 'happy-hr.herokuapp.com', tags: [angularjs, rails]},
