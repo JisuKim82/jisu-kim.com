@@ -21,7 +21,7 @@
       <ul class="list-unstyled">
         <% @tags.each do |tag| %>
           <li>
-            <%= link_to tag.name, root_path(filter: tag.name),
+            <%= link_to tag.name, portfolio_path(filter: tag.name),
               class: 'label label-primary' %>
           </li>
         <% end %>

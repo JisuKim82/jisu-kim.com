@@ -1,10 +1,25 @@
-  <p><%= app.name %></p>
-  <p><%= app.description %></p>
-  <%= link_to app.url %>
-  
-  <% app.tags.each do |tag|%>
-    <ul><%= tag.name %></ul>
-  <% end %>
+<li class="row">
+  <div class="col-sm-9">
+    <a href="http://<%= app.url %>" target="_blank">
+      <h3><%= app.name%></h3>
+    </a>
+    <div>
+      <a href="http://<%= app.url %>" target="_blank">
+        <%= image_tag app.name.downcase.gsub(/\s|\W/, '') + ".png", size: "400x220" %>
+      </a>
+    </div><br>
 
-  <br><br><br>
+    <div>
+      <p>
+        <%= app.description %>
+      </p>
+    </div>
+    <span>
+      <% app.tags.each do |tag| %>
+        <%= link_to tag.name, '#', class: 'label label-primary' %>
+      <% end %>
+    </span>
+  </div>
 
+</li>
+<br><br>
