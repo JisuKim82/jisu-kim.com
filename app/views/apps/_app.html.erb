@@ -1,0 +1,10 @@
+  <p><%= app.name %></p>
+  <p><%= app.description %></p>
+  <%= link_to app.url %>
+  
+  <% app.tags.each do |tag|%>
+    <ul><%= tag.name %></ul>
+  <% end %>
+
+  <br><br><br>
+

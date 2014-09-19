@@ -1,0 +1,32 @@
+<div class="container">
+
+  <h1>Portfolio</h1>
+
+  <ol class="breadcrumb">
+    <li class="active">
+      Applications Deployed
+    </li>
+  </ol>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <ul class="list-unstyled">
+
+        <%= render @apps %>
+
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h2>Tags</h2>
+      <ul class="list-unstyled">
+        <% @tags.each do |tag| %>
+          <li>
+            <%= link_to tag.name, root_path(filter: tag.name),
+              class: 'label label-primary' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+</div>
