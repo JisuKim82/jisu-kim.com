@@ -22,7 +22,7 @@
         <% @tags.each do |tag| %>
           <li>
             <%= link_to tag.name, portfolio_path(filter: tag.name),
-              class: 'label label-primary' %>
+              class: 'label label-primary', id:"#{'showall' if tag.name == 'Show All'}" %>
           </li>
         <% end %>
       </ul>
